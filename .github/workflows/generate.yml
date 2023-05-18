@@ -1,8 +1,5 @@
 name: Generate and publish KML files
 
-env:
-  LAMBDA_INVOKE_URL:
-
 on:
   push:
     branches: [ "main" ]
