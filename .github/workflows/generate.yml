@@ -1,0 +1,16 @@
+name: Generate and publish KML files
+
+on:
+  push:
+    branches: [ "main" ]
+
+  # Allows you to run this workflow manually from the Actions tab
+  workflow_dispatch:
+
+jobs:
+  generate:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Trigger AWS Lambda
+        run: curl https://lzx76jhds46ssbjp6yvuiqrt7i0olfwj.lambda-url.eu-central-1.on.aws/
