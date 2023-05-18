@@ -1,5 +1,8 @@
 name: Generate and publish KML files
 
+env:
+  LAMBDA_INVOKE_URL:
+
 on:
   push:
     branches: [ "main" ]
@@ -13,4 +16,4 @@ jobs:
 
     steps:
       - name: Trigger AWS Lambda
-        run: curl https://lzx76jhds46ssbjp6yvuiqrt7i0olfwj.lambda-url.eu-central-1.on.aws/
+        run: curl $LAMBDA_INVOKE_URL
