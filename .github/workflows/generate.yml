@@ -13,5 +13,5 @@ jobs:
 
     steps:
       - name: Trigger AWS Lambda
-        if: vars.LAMBDA_INVOKE_URL2
+        if: vars.LAMBDA_INVOKE_URL
         run: curl ${{ vars.LAMBDA_INVOKE_URL }}
