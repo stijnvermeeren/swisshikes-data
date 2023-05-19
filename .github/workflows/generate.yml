@@ -12,6 +12,8 @@ jobs:
     runs-on: ubuntu-latest
 
     steps:
+      - name: Echo test
+        run: echo $LAMBDA_INVOKE_URL
       - name: Trigger AWS Lambda
-        if: ${{ env.LAMBDA_INVOKE_URL }}
+        if: env.LAMBDA_INVOKE_URL
         run: curl $LAMBDA_INVOKE_URL
